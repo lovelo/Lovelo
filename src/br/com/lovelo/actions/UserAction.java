@@ -8,7 +8,6 @@ import com.opensymphony.xwork2.ActionSupport;
 public class UserAction extends ActionSupport{
 
 	private static final long serialVersionUID = -655771957124532784L;
-//	private static final long serialVersionUID = 1L;
 	
 	private User user = new User();
 	private UserController userController = new UserController();
