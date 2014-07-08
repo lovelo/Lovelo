@@ -1,4 +1,4 @@
-package br.com.saleservice.dao;
+package br.com.lovelo.dao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import br.com.saleservice.model.User;
+import br.com.lovelo.model.User;
 
 public class UserDAO extends DAO{
 	

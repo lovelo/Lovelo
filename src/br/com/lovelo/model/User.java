@@ -1,4 +1,4 @@
-package br.com.saleservice.model;
+package br.com.lovelo.model;
 
 import java.util.Calendar;
 

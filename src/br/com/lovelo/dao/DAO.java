@@ -1,4 +1,4 @@
-package br.com.saleservice.dao;
+package br.com.lovelo.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

@@ -1,11 +1,11 @@
-package br.com.saleservice.actions;
+package br.com.lovelo.actions;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import br.com.saleservice.controller.UserController;
-import br.com.saleservice.model.User;
+import br.com.lovelo.controller.UserController;
+import br.com.lovelo.model.User;
 
 import com.opensymphony.xwork2.ActionSupport;
 

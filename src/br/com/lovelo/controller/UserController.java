@@ -1,7 +1,7 @@
-package br.com.saleservice.controller;
+package br.com.lovelo.controller;
 
-import br.com.saleservice.dao.UserDAO;
-import br.com.saleservice.model.User;
+import br.com.lovelo.dao.UserDAO;
+import br.com.lovelo.model.User;
 
 public class UserController {
 
