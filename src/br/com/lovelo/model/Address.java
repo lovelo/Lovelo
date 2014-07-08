@@ -13,7 +13,6 @@ import javax.persistence.Id;
 @Entity
 public class Address {
 
-
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
@@ -36,6 +35,9 @@ public class Address {
 	@Column(name="country")
 	private String country;
 
+	@Column(name="locationInformation")
+	private String locationInformation;
+	
 	public String getAddress() {
 		return address;
 	}
@@ -98,5 +100,13 @@ public class Address {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getLocationInformation() {
+		return locationInformation;
+	}
+
+	public void setLocationInformation(String locationInformation) {
+		this.locationInformation = locationInformation;
 	}
 }

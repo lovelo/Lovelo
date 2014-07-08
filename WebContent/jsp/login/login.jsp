@@ -6,7 +6,7 @@
 <html>
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>Sales Service</title>
+    <title>Lovelo - Login</title>
     <link rel="stylesheet" href="styles/styles.css" type="text/css" media="screen">
 </head>
 <body>

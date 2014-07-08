@@ -13,6 +13,10 @@
 		<!-- entidade mapeada -->
 		<class>br.com.lovelo.model.User</class>
 		<class>br.com.lovelo.model.Address</class>
+		<class>br.com.lovelo.model.Classes</class>
+		<class>br.com.lovelo.model.Instrutor</class>
+		<class>br.com.lovelo.model.ClassesDates</class>
+		<class>br.com.lovelo.model.ClassesActivities</class>
 
 		<properties>
 			<!-- dados da conexao -->

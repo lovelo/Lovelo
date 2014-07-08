@@ -12,10 +12,6 @@ public class UserAction extends ActionSupport{
 	private User user = new User();
 	private UserController userController = new UserController();
 	
-	
-	public String login(){
-		return "success";
-	}
 	public String loginUser(){
 		userController.save(user);
 		return SUCCESS;
