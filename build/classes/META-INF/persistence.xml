@@ -11,8 +11,8 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 
 		<!-- entidade mapeada -->
-		<class>br.com.saleservice.model.User</class>
-		<class>br.com.saleservice.model.Address</class>
+		<class>br.com.lovelo.model.User</class>
+		<class>br.com.lovelo.model.Address</class>
 
 		<properties>
 			<!-- dados da conexao -->
