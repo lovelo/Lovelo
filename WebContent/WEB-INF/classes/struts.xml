@@ -6,9 +6,9 @@
    <constant name="struts.devMode" value="true"/>
    <package name="login" extends="struts-default">
      
-      <action name="insertUser" 
-            class="br.com.saleservice.actions.UserAction" 
-            method="insertUser">
+      <action name="loginUser" 
+            class="br.com.lovelo.actions.UserAction" 
+            method="loginUser">
             <result name="success">/jsp/login/login.jsp</result>
       </action>
     </package>  	
