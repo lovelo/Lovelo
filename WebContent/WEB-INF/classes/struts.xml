@@ -4,12 +4,14 @@
    "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
    <constant name="struts.devMode" value="true"/>
+   <constant name="struts.custom.i18n.resources" value="ApplicationResources" />
    <package name="login" extends="struts-default">
-     
-      <action name="loginUser" 
-            class="br.com.lovelo.actions.UserAction" 
-            method="loginUser">
-            <result name="success">/jsp/login/login.jsp</result>
-      </action>
+
+		<action name="loginUser" class="br.com.lovelo.actions.UserAction"
+			method="loginUser">
+			<result name="success">/jsp/login/login.jsp</result>
+		</action>
+		
     </package>  	
+    
 </struts>	

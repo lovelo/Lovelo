@@ -43,10 +43,10 @@ public class Classes {
 	private String workoutDescription;
 	
 	@OneToMany
-	private List<ClassesActivities> classesActivities;
+	private List<Activity> classesActivities;
 	
 	@OneToMany
-	private List<ClassesDates> classesDate;
+	private List<Schedule> classesDate;
 	
 	public Long getId() {
 		return id;
@@ -104,19 +104,19 @@ public class Classes {
 		this.whatToBring = whatToBring;
 	}
 
-	public List<ClassesActivities> getClassesActivities() {
+	public List<Activity> getClassesActivities() {
 		return classesActivities;
 	}
 
-	public void setClassesActivities(List<ClassesActivities> classesActivities) {
+	public void setClassesActivities(List<Activity> classesActivities) {
 		this.classesActivities = classesActivities;
 	}
 
-	public List<ClassesDates> getClassesDate() {
+	public List<Schedule> getClassesDate() {
 		return classesDate;
 	}
 
-	public void setClassesDate(List<ClassesDates> classesDate) {
+	public void setClassesDate(List<Schedule> classesDate) {
 		this.classesDate = classesDate;
 	}
 

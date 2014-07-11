@@ -8,15 +8,15 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-@Entity(name="Classes_Activities")
-public class ClassesActivities {
+@Entity
+public class Activity {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
 	@ManyToOne
-//	@JoinColumn(name="classesId") 
+	@JoinColumn(name="classesId") 
 	private Classes classes;
 	
 	@Column(name="description")

@@ -10,8 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-@Entity(name="Classes_Dates")
-public class ClassesDates {
+@Entity
+public class Schedule {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)

@@ -2,7 +2,6 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
 
-<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -11,11 +10,9 @@
 </head>
 <body>
 	<s:form action="loginUser">
-<%-- 		<s:push value="user"> --%>
-			<s:textfield name="user.user" label="Usuário" />
-			<s:textfield name="user.password" label="Password" />
+			<s:textfield name="user.user" key="user" />
+			<s:textfield name="user.password" key="password" />
 			<s:submit/>
-<%-- 		</s:push>		 --%>
 	</s:form>
 </body>
 </html>

@@ -7,6 +7,9 @@ public class UserController {
 
 	public void save(User user){
 		UserDAO userDAO = new UserDAO();
-		userDAO.save(user);
+		
+		if(userDAO.isUserUnique(user.getUser())){
+			userDAO.save(user);
+		}
 	}
 }

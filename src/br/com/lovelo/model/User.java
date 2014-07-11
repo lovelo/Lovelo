@@ -1,5 +1,6 @@
 package br.com.lovelo.model;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.Calendar;
 
 import javax.persistence.Column;
@@ -8,6 +9,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import br.com.lovelo.crypt.Encryption;
 
 @Entity
 public class User {
@@ -15,11 +20,12 @@ public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
-
+	
+	@Temporal(value=TemporalType.TIMESTAMP)
 	@Column(name="dtInclude")
 	private Calendar dtInclude;
 	
-	@Column(name="user")
+	@Column(name="user" )
 	private String user;
 	
 	@Column(name="password")
@@ -58,7 +64,13 @@ public class User {
 	}
 
 	public void setPassword(String password) {
-		this.password = password;
+		Encryption encrypt = new Encryption();
+		try {
+			this.password = encrypt.encrypt(password);
+		} catch (NoSuchAlgorithmException e) {
+			e.printStackTrace();
+		}
+	
 	}
 
 	public String getEmail() {
