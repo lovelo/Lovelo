@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic">
+    <meta charset="utf-8">
+    <title>Lovelô</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap-custom.css" media="screen">
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="css/bootswatch.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr.custom.js"></script>
+	
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->    
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../home" class="navbar-brand">Lovelô</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="../metodo/">Método</a>
+            </li>
+            <li>
+              <a href="../planos/">Planos</a>
+            </li>
+			<li>
+              <a href="../aulas/">Aulas</a>
+            </li>
+			<li>
+              <a href="../instrutores/">Instrutores</a>
+            </li>
+			<li>
+              <a href="../locais/">Locais</a>
+            </li>
+			<li>
+              <a href="../freepass/">Free Pass</a>
+            </li>
+			<li class="btnModal">
+				<button class="btn btn-primary btn-sm" data-toggle="modal" data-target=".modalLogin">Login</button>				
+			</li>
+          </ul>
+        </div>			
+      </div>
+    </div>
+	
+    <div class="container">
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            
+			<!-- Inicio busca-->
+			<div class="main clearfix">
+				<form id="nl-form" class="nl-form">
+					Gostaria de praticar 
+					<select>
+						<option value="1" selected>esporte</option>
+						<option value="2">musculação</option>
+						<option value="3">natação</option>
+						<option value="4">bike</option>
+						<option value="2">alongamento</option>
+					</select>
+					<br />em
+					<select>
+						<option value="1" selected>uma academia</option>
+						<option value="2">um clube</option>						
+					</select>
+					<br />no período 
+					<select>
+						<option value="1" selected>da manhã</option>
+					 	<option value="2">da tarde</option>
+					 	<option value="3">da noite</option>
+					</select>
+					em <input type="text" value="" placeholder="cidade" data-subline="Exemplo: <em>São Paulo</em> ou <em>Rio de Janeiro</em>"/>
+					<div class="nl-submit-wrap">
+						<button class="nl-submit" type="submit">Achar uma aula</button>
+					</div>
+					<div class="nl-overlay"></div>
+				</form>
+			</div>
+			
+          </div>          
+        </div>
+      </div>
+	  <!-- Modal -->
+		<div class="modal fade modalLogin" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">x</button>
+					<h3 id="myModalLabel">Login</h3>
+				  </div>
+				  <div class="modal-body">
+					<form method="post" action='' name="login_form">
+					  <p>E-mail <input type="text" class="span3" name="eid" id="email" placeholder="Email"></p>
+					  <p>Senha <input type="password" class="span3" name="passwd" placeholder="Password"></p>
+					  <p><button type="submit" class="btn btn-primary">Login</button>
+						<a href="#">Esqueceu sua senha?</a>
+					  </p>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					Novo no Lovelô? <a href="#" class="btn btn-primary">Registre-se</a>
+				  </div>
+			</div>
+		  </div>
+		</div>
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+
+            <ul class="list-unstyled">
+              <!--<li class="pull-right"><a href="#top">Topo</a></li>-->
+              <li><a href="../carreira/">Carreira</a></li>
+              <li><a href="../quemsomos/">Quem somos</a></li>
+			  <li><a href="../termos/">Termos</a></li>
+			  <li><a href="../privacidade/">Privacidade</a></li>
+			  <li><a href="../contato/">Contato</a></li>
+            </ul>           
+
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/bootswatch.js"></script>
+	<script src="js/nlform.js"></script>
+	<script>
+		var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+	</script>
+  </body>
+</html>
