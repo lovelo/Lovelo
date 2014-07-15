@@ -12,8 +12,11 @@ public class UserAction extends ActionSupport{
 	private User user = new User();
 	private UserController userController = new UserController();
 	
-	public String loginUser(){
+	public String loginUser(){		
 		userController.save(user);
+		this.user.setUserLogged(user.getUser());
+		this.user.emptyUser();;
+		this.clearErrors();
 		return SUCCESS;
 	}
 	
@@ -28,6 +31,18 @@ public class UserAction extends ActionSupport{
 	}
 	public void setUserController(UserController userController) {
 		this.userController = userController;
+	}
+	
+	public void validate(){
+		if(this.user.isLoginNotValid()){
+			this.user = null;
+			this.clearErrors();
+			addFieldError("user.user", "O usu‡rio ou a senha est‹o inv‡lidos.");
+		}else if(!userController.isUserUnique(user)){
+			this.user = null;
+			this.clearErrors();
+			addFieldError("user.user", "Este usu‡rio j‡ existe. Favor ingressar com outro.");
+		}
 	}
 	
 }

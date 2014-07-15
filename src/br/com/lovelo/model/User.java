@@ -11,13 +11,16 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+
+import com.sun.istack.internal.NotNull;
 
 import br.com.lovelo.crypt.Encryption;
 
 @Entity
 public class User {
 	
-	@Id
+//	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
@@ -25,8 +28,13 @@ public class User {
 	@Column(name="dtInclude")
 	private Calendar dtInclude;
 	
+	@Id
+	@NotNull
 	@Column(name="user" )
 	private String user;
+	
+	@Transient
+	private String userLogged;
 	
 	@Column(name="password")
 	private String password;
@@ -113,5 +121,21 @@ public class User {
 		this.dtInclude = dtInclude;
 	}
 	
+	public String getUserLogged() {
+		return userLogged;
+	}
+
+	public void setUserLogged(String userLogged) {
+		this.userLogged = userLogged;
+	}
+
+	public void emptyUser(){
+		this.user = null;
+		this.password = null;
+	}
 	
+	public Boolean isLoginNotValid(){
+		return this.user == null || this.user.trim().equals("") || this.password == null || this.password.trim().equals("");
+	}
+	 
 }

@@ -5,11 +5,14 @@ import br.com.lovelo.model.User;
 
 public class UserController {
 
+	UserDAO userDAO = new UserDAO();
+	
 	public void save(User user){
-		UserDAO userDAO = new UserDAO();
-		
-		if(userDAO.isUserUnique(user.getUser())){
-			userDAO.save(user);
-		}
+		userDAO.save(user);
 	}
+	
+	public Boolean isUserUnique(User user){
+		return userDAO.isUserUnique(user.getUser());	
+	}
+	
 }

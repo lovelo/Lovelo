@@ -27,8 +27,8 @@ public class Encryption {
     }
      
     private String encryptByAlgorithm(String algorithm, String value) throws NoSuchAlgorithmException{
-        if (value == null) {
-            throw new IllegalArgumentException("Value null");
+        if (value == null || value.trim().equals("")) {
+            return "";
         }
          
         useAlgortithm(algorithm);
